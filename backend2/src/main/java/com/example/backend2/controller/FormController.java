@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class FormController {
     @PostMapping("/tours")
     public void handleFormSubmission(@RequestBody FormData formData) {
-        System.out.println("HelloWorld");
+        String location = formData.getLocation();
+        String period = formData.getPeriod();
+        int time = formData.getTime();
+        int budget = formData.getBudget();
+        System.out.println(location + period + time + budget);
     }
 }

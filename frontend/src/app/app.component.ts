@@ -13,8 +13,8 @@ export class AppComponent {
   researchForm = new FormGroup({
     location: new FormControl('', Validators.required),
     period: new FormControl('', Validators.required),
-    time: new FormControl(''),
-    budget: new FormControl('')
+    time: new FormControl(null, Validators.required),
+    budget: new FormControl(null)
   })
 
   constructor(
